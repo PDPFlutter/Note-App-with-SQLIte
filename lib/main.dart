@@ -13,12 +13,13 @@ void main() async {
   // Ensure Flutter bindings are initialized before accessing platform channels
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Initialize database
+  // TODO: Initialize your DatabaseHelper implementation
   final dbHelper = DatabaseHelper();
   await dbHelper.database;
 
-  final UserRepository userRepository = UserRepositoryImpl(dbHelper: dbHelper);
-  final NoteRepository noteRepository = NoteRepositoryImpl(dbHelper: dbHelper);
+  // TODO: Initialize your repository implementations
+  final userRepository = UserRepositoryImpl();
+  final noteRepository = NoteRepositoryImpl();
 
   runApp(
     MyApp(
